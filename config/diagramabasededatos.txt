@@ -1,0 +1,27 @@
+
+Usuarios:
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+nombre: VARCHAR(100)
+email: VARCHAR(100)
+password: VARCHAR(255)
+rol: ENUM(‘admin’, ‘atleta’)
+
+Competencias:
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+nombre: VARCHAR(100)
+fecha: DATE
+deporte: ENUM('natacion', 'basquet', 'futbol', 'ciclismo', 'tennis', 'atletismo', 'beisbol', 'boxeo', 'escalada deportiva', 'golf')
+
+Categorías:
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+competencia_id: INT, FOREIGN KEY (REFERENCES competencias(id))
+nombre: VARCHAR(100)
+Atletas:
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+nombre: VARCHAR(100)
+categoria_id: INT, FOREIGN KEY (REFERENCES categorias(id))
+
+Tiempos:
+id: INT, AUTO_INCREMENT, PRIMARY KEY
+atleta_id: INT, FOREIGN KEY (REFERENCES atletas(id))
+tiempo: TIME
