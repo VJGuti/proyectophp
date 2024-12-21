@@ -1,0 +1,78 @@
+<?php
+$host = 'localhost'; // Cambiar si es necesario
+$username = 'root';  // Cambiar si es necesario
+$password = '';      // Cambiar si es necesario
+$dbname = 'gestion_competencias'; // Nombre de la base de datos
+
+try {
+    // Conexión al servidor MySQL
+    $pdo = new PDO("mysql:host=$host", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // Crear base de datos
+    $pdo->exec("CREATE DATABASE IF NOT EXISTS $dbname CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
+    echo "Base de datos '$dbname' creada con éxito.<br>";
+
+    // Usar la base de datos
+    $pdo->exec("USE $dbname");
+
+    // Crear tabla Usuarios
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS usuarios (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            email VARCHAR(100) NOT NULL UNIQUE,
+            password VARCHAR(255) NOT NULL,
+            rol ENUM('admin', 'atleta') NOT NULL
+        )
+    ");
+    echo "Tabla 'usuarios' creada con éxito.<br>";
+
+    // Crear tabla Competencias
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS competencias (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            fecha DATE NOT NULL,
+            deporte ENUM('natacion', 'basquet', 'futbol', 'ciclismo', 'tennis', 'atletismo', 'beisbol', 'boxeo', 'escalada deportiva', 'golf') NOT NULL
+        )
+    ");
+    echo "Tabla 'competencias' creada con éxito.<br>";
+
+    // Crear tabla Categorías
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS categorias (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            competencia_id INT NOT NULL,
+            nombre VARCHAR(100) NOT NULL,
+            FOREIGN KEY (competencia_id) REFERENCES competencias(id) ON DELETE CASCADE
+        )
+    ");
+    echo "Tabla 'categorias' creada con éxito.<br>";
+
+    // Crear tabla Atletas
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS atletas (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) NOT NULL,
+            categoria_id INT NOT NULL,
+            FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
+        )
+    ");
+    echo "Tabla 'atletas' creada con éxito.<br>";
+
+    // Crear tabla Tiempos
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS tiempos (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            atleta_id INT NOT NULL,
+            tiempo TIME NOT NULL,
+            FOREIGN KEY (atleta_id) REFERENCES atletas(id) ON DELETE CASCADE
+        )
+    ");
+    echo "Tabla 'tiempos' creada con éxito.<br>";
+
+} catch (PDOException $e) {
+    die("Error: " . $e->getMessage());
+}
+?>
