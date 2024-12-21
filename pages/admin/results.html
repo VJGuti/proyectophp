@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Resultados - Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/results.css">
+</head>
+<body class="admin-body">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Panel Administrativo</h1>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="competitions.html">Gestionar Competencias</a></li>
+                
+                <li><a href="athletes.html">Atletas</a></li>
+                <li><a href="results.html">Resultados</a></li>
+                <li><a href="../logout.php">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-content">
+        <div class="admin-header">
+            <h2>Gestión de Resultados</h2>
+            <div class="competition-selector">
+                <select id="competitionSelect" class="form-select">
+                    <option value="">Seleccionar Competencia</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="results-list">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Atleta</th>
+                            <th>Categoría</th>
+                            <th>Tiempo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsList">
+                        <!-- Se cargará dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Sistema de Gestión de Competencias Deportivas</p>
+    </footer>
+
+    <script src="../js/admin.js"></script>
+    <script src="../js/results.js"></script>
+</body>
+</html>
