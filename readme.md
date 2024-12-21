@@ -1,15 +1,41 @@
-2. Diseño de la Base de Datos
+# Actividad 1.1-Produccion de Sofware
+
+<br><h4>
+Estudiantes de la Universidad Valle del Momboy
+Facultad de Ingeniería
+Carrera Ingeniería en Computación
+</h4>
+<br>
+<h3>Colaboradores
+</h3>
+<ul>
+<li>Rosangel Betancourt  <i>C.I: 30.536.182</i></li>
+<li>Zeuddy Segovia  <i>C.I: 31.898.075</i></li>
+<li>Victor Gutierrez  <i>C.I: 30.536.182</i></li>
+<li>Alejandro  <i>C.I: 31.898.075</i></li>
+
+</ul>
+
+
+<h2>Descripción</h2>
+<b>Link del video explicativo:  </b>
+
+
+<h2>Diseño de la Base de Datos</h2>
+
 Crear el diagrama de la base de datos: Define las tablas y relaciones necesarias.
 Implementar la base de datos en MySQL: Usa el diagrama para crear las tablas.
 
-3. Estructura del Proyecto
+<h2>Estructura del Proyecto</h2>
+
 Crear la estructura de carpetas:
 public/: Archivos accesibles públicamente (HTML, CSS, JS).
 src/: Código PHP.
 config/: Configuraciones de la base de datos.
 templates/: Plantillas HTML.
 
-4. Desarrollo de Funcionalidades
+
+<h2>Desarrollo de Funcionalidades</h2>
 Autenticación y autorización de usuarios:
 Implementar el registro y login de usuarios.
 Gestionar roles (admin, atleta).
@@ -21,38 +47,8 @@ Implementar la funcionalidad para registrar tiempos.
 Visualización de resultados:
 Crear vistas para mostrar los resultados por categoría y generales.
 
-5. Diseño Responsive
+<h2>Diseño </h2> 
 Diseñar la interfaz de usuario:
 Usar HTML y CSS para el diseño básico.
-Implementar un diseño responsive con frameworks como Bootstrap.
 
-6. Seguridad
-Implementar medidas de seguridad básicas:
-Validación de entradas.
-Protección contra SQL injection.
-Uso de HTTPS.
-
-7. Documentación
-Manual de usuario:
-Crear un manual detallado explicando cómo usar la aplicación.
-Wireframes:
-Diseñar wireframes para las pantallas principales.
-
-8. Presentación del Proyecto
-Diapositivas explicativas:
-Crear diapositivas claras y concisas para la presentación.
-Página web funcional:
-Asegurarse de que la página web esté completamente funcional y montada.
-Preparar una explicación de la estructura y funcionalidades.
-
-9. Gestión del Proyecto
-Repositorio:
-Usar Git para el control de versiones.
-Tablero de gestión:
-Usar herramientas como Trello para organizar y seguir el progreso del proyecto.
-
-10. Pruebas y Despliegue
-Realizar pruebas:
-Probar todas las funcionalidades para asegurarse de que todo funciona correctamente.
-Desplegar la aplicación:
-Montar la aplicación en un servidor web para su uso público.
+<h2>Fin</h2>
