@@ -11,8 +11,8 @@ Carrera Ingeniería en Computación
 <ul>
 <li>Rosangel Betancourt  <i>C.I: 30.536.182</i></li>
 <li>Zeuddy Segovia  <i>C.I: 31.898.075</i></li>
-<li>Victor Gutierrez  <i>C.I: 30.536.182</i></li>
-<li>Alejandro  <i>C.I: 31.898.075</i></li>
+<li>Victor Gutierrez  <i>C.I: 28.206.156</i></li>
+<li>Samuel Toro  <i>C.I: 29.825.546</i></li>
 
 </ul>
 
