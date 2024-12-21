@@ -1,0 +1,48 @@
+/* Estilos específicos para la gestión de resultados */
+.competition-selector {
+    margin-bottom: 2rem;
+}
+
+.form-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 250px;
+    font-size: 1rem;
+}
+
+.results-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-input {
+    width: 100px;
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.position-cell {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Medallas */
+.medal-1 { color: gold; }
+.medal-2 { color: silver; }
+.medal-3 { color: #cd7f32; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .competition-selector {
+        margin-bottom: 1rem;
+    }
+
+    .form-select {
+        width: 100%;
+    }
+}
