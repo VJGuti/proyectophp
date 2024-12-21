@@ -2,7 +2,7 @@
 $host = 'localhost'; // Cambiar si es necesario
 $username = 'root';  // Cambiar si es necesario
 $password = '';      // Cambiar si es necesario
-$dbname = 'gestion_competencias'; // Nombre de la base de datos
+$dbname = 'competencia'; // Nombre de la base de datos
 
 try {
     // Conexión al servidor MySQL
