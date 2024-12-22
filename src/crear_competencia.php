@@ -23,16 +23,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($resultado) {
             ?>
-            <h3 class="success">Registrado</h3>
+            <h3 class="message success">Registrado</h3>
             <?php
         } else {
             ?>
-            <h3 class="error">Occurio un error</h3>
+            <h3 class="message error">Occurio un error</h3>
             <?php
         }
     } else {
         ?>
-            <h3 class="error">Llene los campos</h3>
+            <h3 class="message error">Llene los campos</h3>
             <?php
     }
 }
