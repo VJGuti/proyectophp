@@ -1,26 +1,39 @@
 <?php
- include '../config/conexion.php';
- session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")
-{
-    $nombre = $_POST['nombre'];
-    $password = $_POST['password'];
+include("conexion.php");
 
-    $stmt = $conn  -> prepare("SELECT * FROM usuarios WHERE email = ?");
-    $stmt -> bind_param ("s", $email);
-    $stmt -> execute();
+if(isset($_POST['register'])){
+   if(
+    strlen( $_POST['name'])>= 1 &&
+    strlen( $_POST['email'])>= 1 &&
+    strlen( $_POST['direction'])>= 1 &&
+    strlen( $_POST['phone'])>= 1 &&
+    strlen( $_POST['password'])>= 1 
+    ) 
+   
+    {
+     $name = trim($_POST['name']);
+     $email = trim($_POST['email']);
+     $direction= trim($_POST['direction']);
+     $phone = trim($_POST['phone']);
+     $password = trim($_POST['password']);
+     $fecha = date('d/m/y');
+     $consulta ="INSERT INTO datos(nombre, email, direccion, telefono, contraseña,fecha)
+     
+        VALUES('$name', '$email','$direction','$phone','$password','$fecha')";
+        $resultado=mysqli_query($conex,$consulta);
+        if($resultado){
 
-    $result = $stmt -> get_result();
-    $user = $result -> fetch_assoc();
-
-    if (user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_role'] = $user['rol'];
-            header("location: dashboard.php"); 
-                exit();
-    } else {
-        echo "Credenciales incorrectas";
+            header("Location: registrar_competencias.php");
+           
+        } else{
+            ?>
+            <h3 class="error">Occurio un error</h3>
+            <?php
+        }
+    }else{
+        ?>
+            <h3 class="error">Llene todos los campos</h3>
+        <?php
     }
 }
-?>
