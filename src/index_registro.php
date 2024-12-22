@@ -43,7 +43,7 @@
 </form>
 
 <?php
-include("registrar.php");
+include("login.php");
 include("crear_competencia.php")
 ?>
 
