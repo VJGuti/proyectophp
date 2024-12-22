@@ -2,7 +2,7 @@
 $host = 'localhost'; // Cambiar si es necesario
 $username = 'root';  // Cambiar si es necesario
 $password = '';      // Cambiar si es necesario
-$dbname = 'competencia'; // Nombre de la base de datos
+$dbname = 'registro'; // Nombre de la base de datos
 
 try {
     // Conexión al servidor MySQL
@@ -11,10 +11,10 @@ try {
 
     // Crear base de datos
     $pdo->exec("CREATE DATABASE IF NOT EXISTS $dbname CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci");
-    echo "Base de datos '$dbname' creada con éxito.<br>";
+    echo "Base de datos '$registro' creada con éxito.<br>";
 
     // Usar la base de datos
-    $pdo->exec("USE $dbname");
+    $pdo->exec("USE $registro");
 
     // Crear tabla Usuarios
     $pdo->exec("
