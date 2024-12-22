@@ -42,7 +42,7 @@
         <button type="submit">Crear Competencia</button>
     </form>
     <?php
-    include("conexion.php");
+    include("../cofig/conexion.php");
     ?>
 
 </body>
