@@ -21,7 +21,7 @@
     </div>
         
     <div class="input-wrapper">
-    <<label for="deporte">Deporte:</label>
+    <label for="deporte">Deporte:</label>
         <select id="deporte" name="deporte" required>
             <option value="1">Natación</option>
             <option value="2">Ciclismo</option>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="input-wrapper">
-    <<label for="deporte">Deporte:</label>
+   
     <label for="categoria">Categoría:</label>
     <input type="text" id="categoria" name="categoria" required><br><br>
     </div>
