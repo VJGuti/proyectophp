@@ -51,7 +51,7 @@
 </head>
 <body>
     <h1>Bienvenido a la Administracion de Torneos y Competencias</h1>
-    <a href="registro.html">Inscripción de atletas por Competencia</a>
+   <a href="index_registro.php">Inscripcion de atletas por competencias</a>
     <a href="login.html">Iniciar Sesion para ver mi Registro</a>
     <a href="login.html">Registro de tiempos</a>
 
