@@ -1,6 +1,3 @@
-<?php
-    include '../config/conexion.php';
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +7,7 @@
     <title>Torneos y Competencias</title>
     <style>
         body {
-            background-color: #2f026e; /* Fondo azul oscuro */
+            background-color:rgb(46, 76, 94); /* Fondo azul oscuro */
             color: white;             /* Letra blanca */
             font-family: Arial, sans-serif;
             text-align: center;       /* Centrar todo el contenido */
@@ -22,7 +19,7 @@
         }
         a {
             display: block;           /* Cada enlace se comporta como un botón */
-            background-color: #8b48cf; /* Botones de color naranja */
+            background-color:rgb(51, 84, 173); /* Botones de color naranja */
             color: white;
             text-decoration: none;   /* Eliminar subrayado */
             padding: 15px 20px;
@@ -51,22 +48,22 @@
 </head>
 <body>
     <h1>Bienvenido a la Administracion de Torneos y Competencias</h1>
-   <a href="index_registro.php">Inscripcion de atletas por competencias</a>
-    <a href="login.html">Iniciar Sesion para ver mi Registro</a>
-    <a href="login.html">Registro de tiempos</a>
-
+    
+    <a href="index_registro.php">Inscripcion de atletas por competencias</a>
+    <a href="../admin/inicio_sesion.php">Iniciar Sesion</a>
+    <a href="../admin/competitions.php">Administrador</a>
     
  <!-- Contenedor de imágenes -->
  <div class="image-container">
     <!-- Imagen de Natación -->
     <div class="image-container">
-        <img src="natacion 1.jpg" alt="" />
+        <img src="../images/natacion 1.jpg" alt="" />
         <div class="caption">Natacion</div>
     </div>
 
     <!-- Imagen de Atletismo -->
     <div class="image-container">
-        <img src="atletismo 1.jpg" alt="" />
+        <img src="../images/atletismo 1.jpg" alt="" />
         <div class="caption">Atletismo</div>
     </div>
 </div>

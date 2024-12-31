@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Resultados - Admin</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/athletes.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/results.css">
+</head>
+<body class="admin-body">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <h1>Panel Administrativo</h1>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="competitions.php">Gestionar Competencias</a></li>
+                <li><a href="atletas.php">Atletas</a></li>
+                <li><a href="results.html">Resultados</a></li>
+                <li><a href="../src/index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-content">
+        <div class="admin-header">
+            <h2>Gestión de Resultados</h2>
+            <div class="competition-selector">
+                <select id="competitionSelect" class="form-select" onchange="loadResults()">
+                    <option value="">Seleccionar Deporte</option>
+                    <option value="Natacion">Natación</option>
+                    <option value="Ciclismo">Ciclismo</option>
+                    <option value="Atletismo">Atletismo</option>
+                    <option value="Triatlon">Triatlón</option>
+                    <option value="Acuatlon">Acuatlón</option>
+                    <option value="Aguas Abiertas">Aguas Abiertas</option>
+                </select>
+                <a href="registrar_tiempos.html">
+                    <button type="button" class="btn-register-time">Registrar Tiempo</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="results-list">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Atleta</th>
+                            <th>Deporte</th>
+                            <th>Posición</th>
+                            <th>Tiempo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsList">
+                        <!-- Se cargará dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Sistema de Gestión de Competencias Deportivas</p>
+    </footer>
+
+    <script>
+        // Función para cargar los resultados basados en el deporte seleccionado
+        function loadResults() {
+            const deporte = document.getElementById("competitionSelect").value;
+            if (deporte) {
+                fetch('obtener_resultados.php?deporte=' + deporte)
+                    .then(response => response.json())
+                    .then(data => {
+                        const resultsList = document.getElementById("resultsList");
+                        resultsList.innerHTML = '';
+
+                        let position = 1;
+                        data.forEach(result => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${result.nombre}</td>
+                                <td>${result.deporte}</td>
+                                <td>${position}°</td>
+                                <td>${result.tiempo}</td>
+                            `;
+                            resultsList.appendChild(row);
+                            position++;
+                        });
+                    })
+                    .catch(error => console.error('Error al cargar los resultados:', error));
+            }
+        }
+    </script>
+</body>
+</html>

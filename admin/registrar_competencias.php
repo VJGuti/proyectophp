@@ -34,6 +34,18 @@
     </div>
 
     <div class="input-wrapper">
+        <label for="sub">Sub:</label>
+        <select id="sub" name="sub" required>
+        <option value="1">Sub-14</option>
+            <option value="2">Sub-16</option>
+            <option value="3">Sub-18</option>
+            <option value="4">Sub-20</option>
+            <option value="5">Sub-22</option>
+            <option value="6">Profesional</option>
+        </select>
+    </div>
+
+    <div class="input-wrapper">
    
     <label for="categoria">Categoría:</label>
     <input type="text" id="categoria" name="categoria" required><br><br>
@@ -49,7 +61,7 @@
     </div>
 
     <div class="checkbox-wrapper">
-    <label for="genero">Género:</label>
+   
     <label for="relevo">¿Es Relevo?</label>
     <input type="checkbox" id="relevo" name="relevo" value="1"><br><br>
     </div>
@@ -59,7 +71,7 @@
         <button type="submit" class="btn">Crear Competencia</button>
     </form>
     <?php
-    include("../cofig/conexion.php");
+   include("../conexion.php");
     ?>
 
 </body>

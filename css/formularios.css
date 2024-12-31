@@ -30,13 +30,13 @@ form {
 form:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12),
-                0 25px 60px rgba(140, 43, 231, 0.1),
+                0 25px 60px rgba(50, 103, 119, 0.993),
                 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 form h2 {
     font-size: 32px;
-    color: #2d3748;
+    color: #24464e;
     margin: 0 0 30px 0;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -51,13 +51,13 @@ form h2 {
 }
 
 input, select {
-    color: #4a5568;
+    color: #3b4658;
     padding: 20px 15px 20px 60px;
     width: 100%;
     border-radius: 16px;
     border: 2px solid transparent;
-    box-shadow: 0 4px 15px rgba(192, 203, 251, 0.15),
-                0 2px 5px rgba(140, 43, 231, 0.05);
+    box-shadow: 0 4px 15px rgb(47, 83, 100),
+                0 2px 5px rgba(49, 91, 107, 0.959);
     outline: none;
     font-size: 16px;
     background: #f7fafc;
@@ -65,10 +65,10 @@ input, select {
 }
 
 input:focus, select:focus {
-    border-color: #8c2be7;
+    border-color: #345768;
     background: white;
-    box-shadow: 0 8px 25px rgba(140, 43, 231, 0.15),
-                0 4px 10px rgba(140, 43, 231, 0.1);
+    box-shadow: 0 8px 25px rgb(57, 127, 145),
+                0 4px 10px rgb(51, 112, 131);
 }
 
 select {
@@ -92,6 +92,7 @@ input::placeholder {
     transform: translateY(-50%);
     opacity: 0.7;
     transition: opacity 0.3s ease;
+   
 }
 
 .input-wrapper:focus-within .input-icon {
@@ -126,16 +127,16 @@ input::placeholder {
 }
 
 .checkbox-wrapper input[type="checkbox"]:checked {
-    background-color: #8c2be7;
-    border-color: #8c2be7;
+    background-color: #356274;
+    border-color: #366981;
 }
 
 .btn {
     padding: 18px 24px;
     background: linear-gradient(
         135deg,
-        #8c2be7 0%,
-        #3d01f5 100%
+        #2d5070 0%,
+        #294f5a 100%
     );
     color: white;
     cursor: pointer;
@@ -144,18 +145,18 @@ input::placeholder {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 4px 15px rgba(140, 43, 231, 0.3),
-                0 2px 5px rgba(140, 43, 231, 0.1);
+    box-shadow: 0 4px 15px rgb(47, 111, 131),
+                0 2px 5px rgb(51, 132, 156);
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(140, 43, 231, 0.4),
-                0 4px 10px rgba(140, 43, 231, 0.2);
+    box-shadow: 0 8px 25px rgb(46, 91, 109),
+                0 4px 10px rgba(41, 87, 95, 0.973);
     background: linear-gradient(
         135deg,
-        #9d3cf8 0%,
-        #4e12f6 100%
+        #315270 0%,
+        #2c5c7c 100%
     );
 }
 
@@ -177,10 +178,10 @@ input::placeholder {
     color: #2f855a;
 }
 
-.error {
+ .error {
     background-color: #fed7d7;
     color: #c53030;
-}
+} 
 
 .message-container {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -222,7 +223,7 @@ input::placeholder {
     background-color: rgba(245, 101, 101, 0.08);
     color: #C53030;
     border: 1px solid rgba(245, 101, 101, 0.2);
-}
+} 
 
 .message h3 {
     margin: 0 0 8px 0;
@@ -255,6 +256,7 @@ input::placeholder {
         left: 20px;
         height: 20px;
         width: 20px;
+      
     }
 
     .btn {

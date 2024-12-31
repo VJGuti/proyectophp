@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Tiempos</title>
+    <link rel="stylesheet" href="../css/formularios.css">
+</head>
+<body>
+    <h1>Registrar Tiempo de Atleta</h1>
+    <form action="guardar_tiempo.php" method="POST">
+        <label for="nombre">Nombre del Atleta:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br><br>
+
+        <label for="deporte">Deporte:</label>
+        <select id="deporte" name="deporte" required>
+            <option value="natacion">Natación</option>
+            <option value="ciclismo">Ciclismo</option>
+            <option value="atletismo">Atletismo</option>
+            <option value="triatlon">Triatlón</option>
+            <option value="acuatlon">Acuatlón</option>
+            <option value="aguas_abiertas">Aguas Abiertas</option>
+        </select>
+        <br><br>
+
+
+        <label for="tiempo">Tiempo (hh:mm:ss):</label>
+        <input type="text" id="tiempo" name="tiempo" placeholder="00:00:00" required>
+        <br><br>
+
+       
+        
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
