@@ -18,7 +18,7 @@ Carrera Ingeniería en Computación
 
 
 <h2>Descripción</h2>
-<b>Link del video explicativo:  </b>
+<b>Link de la maquetación en Figma: https://www.figma.com/design/dO9K9MGmlWSzEn6TF2doXn/Actividad-2.1--PHP?node-id=0-1&t=HUQeJkI1HMLjAdLQ-1  </b>
 
 
 <h2>Diseño de la Base de Datos</h2>
